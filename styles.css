@@ -1,0 +1,92 @@
+/* Estilo para el video de fondo */
+.background-video {
+  position: fixed;           /* Fija el video al fondo */
+  top: 0;                    /* Coloca el video en la parte superior */
+  left: 0;                   /* Coloca el video en la parte izquierda */
+  width: 100%;               /* Ancho completo */
+  height: 100%;              /* Alto completo */
+  object-fit: cover;         /* Cubre todo el fondo sin distorsionar */
+  z-index: -1;               /* Coloca el video por detrás del contenido */
+}
+
+/* Estilo general para el contenido */
+.content {
+  position: relative;        /* Necesario para que el contenido esté sobre el video */
+  padding: 20px;             /* Espaciado interno */
+  color: white;              /* Color de texto blanco para el contraste */
+  z-index: 1;                /* Asegura que el contenido esté encima del video */
+}
+
+/* Estilo para el título */
+.title-highlight {
+  font-size: 2.5rem;         /* Tamaño de fuente más grande */
+  text-align: center;        /* Centra el título */
+  margin-bottom: 10px;       /* Espacio debajo del título */
+  color: #fff;               /* Color de texto blanco */
+}
+
+/* Estilo para los botones de acción */
+.btn-action {
+  background-color: #ff4d4d; /* Color de fondo rojo */
+  border: none;              /* Elimina el borde */
+  color: white;              /* Texto blanco */
+  padding: 10px 20px;        /* Espaciado interno */
+  font-size: 1rem;           /* Tamaño de fuente */
+  cursor: pointer;          /* Cambia el cursor a mano */
+  border-radius: 5px;        /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Efecto de transición */
+}
+
+.btn-action:hover {
+  background-color: #ff1a1a; /* Color más oscuro al pasar el ratón */
+}
+
+/* Estilo para la lista ordenada */
+#highlighted-scenes {
+  margin: 20px 0;            /* Márgenes superior e inferior */
+  padding-left: 20px;        /* Sangría para la lista */
+  font-size: 1.2rem;         /* Tamaño de fuente más grande */
+}
+
+/* Estilo para la sección de la batalla */
+.battle-summary {
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+  padding: 20px;            /* Espaciado interno */
+  border-radius: 10px;      /* Bordes redondeados */
+  margin-top: 20px;         /* Espacio superior */
+}
+
+/* Estilo para la imagen de la batalla */
+.battle-image {
+  width: 100%;               /* Ajusta la imagen al 100% del contenedor */
+  max-width: 600px;          /* Evita que la imagen se agrande más de 600px */
+  height: auto;              /* Mantiene las proporciones de la imagen */
+  display: block;            /* Elimina el espacio debajo de la imagen */
+  margin: 20px auto;         /* Centra la imagen y le da espacio arriba y abajo */
+  border-radius: 10px;       /* Bordes redondeados para un estilo más limpio */
+}
+
+/* Estilo para la imagen del contenedor (opcional) */
+figure {
+  text-align: center;        /* Centra la imagen y el pie de foto */
+  margin: 0;                 /* Elimina márgenes innecesarios */
+}
+
+/* Estilo para la leyenda de la imagen */
+figcaption {
+  font-size: 1rem;           /* Tamaño de fuente para la leyenda */
+  color: #555;               /* Color de texto para la leyenda */
+  margin-top: 10px;          /* Espacio entre la imagen y la leyenda */
+  font-style: italic;        /* Cursiva para el pie de foto */
+}
+
+/* Estilo para el enlace */
+.battle-link {
+  color: #f0f0f0;            /* Color claro para el enlace */
+  text-decoration: none;     /* Elimina el subrayado del enlace */
+  font-size: 1.2rem;         /* Tamaño de fuente más grande */
+}
+
+.battle-link:hover {
+  color: #ff4d4d;            /* Color del enlace al pasar el ratón */
+}

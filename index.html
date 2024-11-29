@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pelea Épica</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Estilo para el desplegable */
+    .more-info {
+      display: none;
+      background-color: #f9f9f9;
+      padding: 15px;
+      border: 1px solid #ddd;
+      margin-top: 10px;
+    }
+    .more-info p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+    .more-info h3 {
+      color: #333;
+    }
+    /* Estilo para la primera parte (azul) */
+    .blue-text {
+      color: blue;
+    }
+    /* Estilo para la segunda parte (rojo) */
+    .red-text {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <!-- Video de fondo -->
+  <video id="background-video" autoplay loop muted playsinline class="background-video">
+    <source src="videos/sukunavsgojo.mp4" type="video/mp4">
+    Tu navegador no soporta la etiqueta de video.
+  </video>
+
+  <!-- Contenido de la página -->
+  <div class="content">
+    <!-- Encabezado principal -->
+    <h1 id="main-title" class="title-highlight">Pelea Épica: Sukuna vs Gojo</h1>
+    <p>El enfrentamiento más legendario de la historia de la hechicería.</p>
+
+    <!-- Lista ordenada -->
+    <ol id="highlighted-scenes">
+      <li>¿Quién debió ganar? ¡Papá Gojo!</li>
+      <li>¿O el consentido del autor, Sukuna?</li>
+      <li>¡Una batalla épica para recordar!</li>
+    </ol>
+
+    <!-- Sección con la fecha y descripción de la batalla -->
+    <section class="battle-summary">
+      <h2>Acerca de la batalla</h2>
+      <p>
+        El **24 de diciembre de 2024**, Ryomen Sukuna, el más fuerte de la historia, se enfrentó a Gojo Satoru, el hechicero más poderoso de la actualidad. Esta intensa batalla, que tuvo lugar durante el festival del duelo, dejó una marca imborrable en el mundo de la hechicería.
+      </p>
+    </section>
+
+    <!-- Imagen estilizada -->
+    <figure>
+      <img src="images/maxresdefault.jpg" alt="Gojo y Sukuna enfrentándose" class="battle-image">
+      <figcaption>Gojo y Sukuna preparándose para luchar.</figcaption>
+    </figure>
+
+    <!-- Botón para activar/desactivar el sonido -->
+    <button id="sound-toggle" class="btn-action">Activar Sonido</button>
+
+    <!-- Botón para Play/Pause -->
+    <button id="play-pause-toggle" class="btn-action">Pausar Video</button>
+
+    <!-- Enlace estilizado -->
+    <p>
+      <a href="javascript:void(0);" id="more-info-toggle" class="battle-link">Más información sobre los personajes aquí.</a>
+    </p>
+
+    <!-- Sección desplegable con más información sobre la pelea -->
+    <div id="more-info" class="more-info">
+      <h3>¿Por qué pelearon Sukuna y Gojo?</h3>
+      <p class="blue-text">
+        La pelea entre Sukuna y Gojo fue una batalla épica que marcó un hito en el mundo de la hechicería. Sukuna, conocido como el "Rey de las Maldiciones", tenía un odio profundo hacia los hechiceros poderosos, mientras que Gojo, siendo el hechicero más fuerte de la actualidad, se vio obligado a enfrentarse a él para proteger el equilibrio del mundo. La batalla fue brutal, con ambos mostrando habilidades extraordinarias, pero el objetivo de Gojo era no solo derrotar a Sukuna, sino también demostrar su dominio absoluto sobre el mundo de la hechicería.
+      </p>
+      <h3>¿Cómo terminó la pelea?</h3>
+      <p class="red-text">
+        La pelea entre Sukuna y Gojo terminó de una manera inesperada debido a un giro dramático en el combate. Mientras la lucha estaba en su punto más álgido, Sukuna reveló una nueva y devastadora técnica, el **"Corte del Mundo"**. Esta técnica, que es capaz de cortar la realidad misma, permitió a Sukuna dividir el espacio y, con una precisión mortal, **partir a Gojo en dos**. El poder de esta técnica fue tal que incluso Gojo, conocido por su invencibilidad y habilidades extraordinarias, no pudo evitar el impacto. La brutalidad de este ataque significó el fin de la batalla, con Gojo cayendo ante la nueva amenaza que representaba Sukuna. Aunque Gojo había demostrado su increíble poder durante la pelea, esta nueva técnica de Sukuna fue la que finalmente definió el resultado, dejando una marca indeleble en la historia de la hechicería.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Función para activar o desactivar el sonido del video
+    const video = document.getElementById('background-video');
+    const soundToggle = document.getElementById('sound-toggle');
+    const playPauseToggle = document.getElementById('play-pause-toggle');
+    const moreInfoToggle = document.getElementById('more-info-toggle');
+    const moreInfoSection = document.getElementById('more-info');
+
+    soundToggle.addEventListener('click', () => {
+      if (video.muted) {
+        video.muted = false;
+        soundToggle.textContent = 'Desactivar Sonido';
+      } else {
+        video.muted = true;
+        soundToggle.textContent = 'Activar Sonido';
+      }
+    });
+
+    // Función para pausar o reanudar el video
+    playPauseToggle.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+        playPauseToggle.textContent = 'Pausar Video';
+      } else {
+        video.pause();
+        playPauseToggle.textContent = 'Reproducir Video';
+      }
+    });
+
+    // Función para mostrar u ocultar la información adicional
+    moreInfoToggle.addEventListener('click', () => {
+      if (moreInfoSection.style.display === 'none' || moreInfoSection.style.display === '') {
+        moreInfoSection.style.display = 'block';
+        moreInfoToggle.textContent = 'Ocultar información sobre los personajes';
+      } else {
+        moreInfoSection.style.display = 'none';
+        moreInfoToggle.textContent = 'Más información sobre los personajes aquí.';
+      }
+    });
+  </script>
+</body>
+</html>
